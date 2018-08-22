@@ -9,6 +9,10 @@ void num03();
 void num04();
 void num05();
 void num06();
+void num07();
+void num08();
+void num09();
+
 // Função principal
 int main()
 {
@@ -49,6 +53,21 @@ int main()
             printf("Exercicio 06 \n");
             linha();
             num06();
+        break;
+        case(7):
+            printf("Exercicio 07 \n");
+            linha();
+            num07();
+        break;
+        case(8):
+            printf("Exercicio 08 \n");
+            linha();
+            num08();
+        break;
+        case(9):
+            printf("Exercicio 09 \n");
+            linha();
+            num09();
         break;
         default:
             printf("Exercicio não encontrado ou não terminado :) \n");
@@ -119,6 +138,7 @@ void num05() {
     printf("O volume da caixa eh: %.2f\n", a*c*l);
 }
 
+// Calcula o juros
 void num06() {
     float prest, valor, taxa, tempo;
 
@@ -131,3 +151,35 @@ void num06() {
 
     printf("O valor corrigido da prestação eh de: \n", valor*(taxa/100)*tempo);
 }
+
+// Calcula a área do quadrado
+void num07() {
+    int lado;
+    printf("Digite o valor do lado do quadrado: \n");
+    scanf("%d", &lado);
+    printf("O valor da area do quadrado eh: %d\n", lado*lado);
+}
+
+// Calcula a área do triângulo
+void num08() {
+    int base, altura;
+    printf("Digite a base: \n");
+    scanf("%d", &base);
+    printf("Digite a altura: \n");
+    scanf("%d", &altura);
+
+    printf("A area do triangulo eh: %.2f\n", base*altura/2.0);
+}
+
+// Calcula o volume do cilindro
+void num09() {
+    int altura, raio;
+    printf("Digite a raio: \n");
+    scanf("%d", &raio);
+    printf("Digite a altura: \n");
+    scanf("%d", &altura);
+
+    printf("O volume do cilindro eh: %.2f \n", M_PI*pow(raio, 2)*altura);
+}
+
+
