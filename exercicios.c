@@ -12,6 +12,7 @@ void num06();
 void num07();
 void num08();
 void num09();
+void num10();
 
 // Função principal
 int main()
@@ -68,6 +69,11 @@ int main()
             printf("Exercicio 09 \n");
             linha();
             num09();
+        break;
+        case(10):
+            printf("Exercicio 10 \n");
+            linha();
+            num10();
         break;
         default:
             printf("Exercicio não encontrado ou não terminado :) \n");
@@ -149,7 +155,7 @@ void num06() {
     printf("Digite os dias em atraso \n");
     scanf("%f", &tempo);
 
-    printf("O valor corrigido da prestação eh de: \n", valor*(taxa/100)*tempo);
+    printf("O valor corrigido da prestação eh de: %.2f\n", valor*(taxa/100)*tempo);
 }
 
 // Calcula a área do quadrado
@@ -182,4 +188,20 @@ void num09() {
     printf("O volume do cilindro eh: %.2f \n", M_PI*pow(raio, 2)*altura);
 }
 
+// Calcula a média ponderada de 2 valores
+void num10() {
+    float nota1, nota2, peso1, peso2, media;
+
+    printf("Digite a nota 1: \n");
+    scanf("%f", &nota1);
+    printf("Digite a nota 2: \n");
+    scanf("%f", &nota2);
+    printf("Digite a peso 1: \n");
+    scanf("%f", &peso1);
+    printf("Digite a peso 2: \n");
+    scanf("%f", &peso2);
+
+    media = (nota1*peso1 + nota2*peso2)/(peso1+peso2);
+    printf("A media ponderada dos valores eh: %.2f\n", media);
+}
 
